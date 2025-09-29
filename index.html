@@ -1,137 +1,236 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <title>Ridge Creek AI Labs</title>
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <style>
-    body {
-      margin: 0;
-      font-family: "Segoe UI", Arial, sans-serif;
-      background: linear-gradient(135deg, #1c1c1c, #3a6073);
-      color: #f5f5f5;
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      min-height: 100vh;
-      text-align: center;
-      padding: 20px;
-    }
-    .card {
-      background: rgba(255, 255, 255, 0.05);
-      backdrop-filter: blur(8px);
-      padding: 40px;
-      border-radius: 16px;
-      box-shadow: 0 4px 20px rgba(0,0,0,0.4);
-      max-width: 800px;
-      width: 100%;
-    }
-    .logo {
-      font-size: 2em;
-      font-weight: bold;
-      margin-bottom: 20px;
-    }
-    h1 {
-      margin: 0 0 15px;
-      font-size: 28px;
-    }
-    p {
-      font-size: 18px;
-      margin-bottom: 20px;
-    }
-    .banner {
-      margin: 20px 0;
-    }
-    .banner img {
-      max-width: 100%;
-      height: auto;
-      border-radius: 12px;
-      box-shadow: 0 2px 12px rgba(0,0,0,0.3);
-    }
-    .projects {
-      margin: 30px 0;
-      text-align: left;
-    }
-    .projects h2 {
-      font-size: 22px;
-      margin-bottom: 10px;
-      border-bottom: 1px solid rgba(255,255,255,0.2);
-      padding-bottom: 5px;
-    }
-    .project {
-      margin: 15px 0;
-      padding: 15px;
-      background: rgba(255,255,255,0.08);
-      border-radius: 10px;
-    }
-    .project h3 {
-      margin: 0 0 8px;
-      font-size: 18px;
-    }
-    .project p {
-      margin: 0;
-      font-size: 15px;
-    }
-    .contact a {
-      color: #66ccff;
-      text-decoration: none;
-      font-weight: 500;
-    }
-    .footer {
-      margin-top: 30px;
-      font-size: 14px;
-      color: #ccc;
-    }
-  </style>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ridge Creek AI Labs - Innovating the AI Frontier</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --primary-black: #0a0a0a;
+            --dark-bg: #1a1a1a;
+            --accent-blue: #007bff; /* Dynamic blue accents (replaces green for trust & tech vibe) */
+            --bright-blue: #1e90ff; /* Brighter blue for highlights/glows */
+            --secondary-blue: #0056b3;
+            --text-light: #ffffff;
+            --glow-blue: 0 0 20px #1e90ff, 0 0 40px #1e90ff;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Inter', sans-serif;
+            line-height: 1.6;
+            color: var(--text-light);
+            background: linear-gradient(135deg, var(--primary-black) 0%, var(--secondary-blue) 100%);
+            min-height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            padding: 20px;
+            perspective: 1000px;
+        }
+
+        .card {
+            background: rgba(255, 255, 255, 0.05);
+            backdrop-filter: blur(10px);
+            padding: 40px;
+            border-radius: 20px;
+            box-shadow: 0 8px 32px rgba(0, 0, 0, 0.5), var(--glow-blue);
+            max-width: 900px;
+            width: 100%;
+            text-align: center;
+            animation: float 6s ease-in-out infinite;
+            transform-style: preserve-3d;
+        }
+
+        .logo {
+            font-size: 2.5em;
+            font-weight: 700;
+            margin-bottom: 20px;
+            color: var(--bright-blue);
+            text-shadow: var(--glow-blue);
+        }
+
+        h1 {
+            font-size: 2.2em;
+            margin: 0 0 15px;
+            color: var(--text-light);
+            text-shadow: 1px 1px 4px rgba(0, 0, 0, 0.8);
+        }
+
+        .intro p {
+            font-size: 1.2em;
+            margin-bottom: 30px;
+            opacity: 0.9;
+        }
+
+        /* Coming Soon Banner - CSS-based placeholder for one-file */
+        .banner {
+            margin: 30px 0;
+            height: 200px;
+            background: linear-gradient(135deg, var(--accent-blue), var(--bright-blue));
+            border-radius: 15px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.5em;
+            font-weight: 600;
+            color: var(--primary-black);
+            box-shadow: 0 4px 20px rgba(0, 123, 255, 0.3);
+            animation: pulse-glow 2s infinite alternate;
+        }
+
+        .projects {
+            margin: 40px 0;
+            text-align: left;
+        }
+
+        .projects h2 {
+            font-size: 1.8em;
+            margin-bottom: 20px;
+            color: var(--bright-blue);
+            text-shadow: var(--glow-blue);
+            border-bottom: 2px solid rgba(30, 144, 255, 0.3);
+            padding-bottom: 10px;
+        }
+
+        .projects-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 20px;
+        }
+
+        .project {
+            background: rgba(255, 255, 255, 0.08);
+            padding: 20px;
+            border-radius: 12px;
+            transition: all 0.3s;
+            border-left: 4px solid var(--accent-blue);
+            transform: rotateY(5deg);
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
+        }
+
+        .project:hover {
+            transform: rotateY(0deg) translateZ(10px);
+            box-shadow: 0 8px 25px rgba(0, 123, 255, 0.4), var(--glow-blue);
+            background: rgba(255, 255, 255, 0.12);
+        }
+
+        .project h3 {
+            margin: 0 0 10px;
+            font-size: 1.3em;
+            color: var(--bright-blue);
+            text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.7);
+        }
+
+        .project p {
+            margin: 0;
+            font-size: 1em;
+            opacity: 0.9;
+        }
+
+        .contact {
+            margin: 30px 0;
+            font-size: 1.1em;
+        }
+
+        .contact a {
+            color: var(--bright-blue);
+            text-decoration: none;
+            font-weight: 600;
+            text-shadow: var(--glow-blue);
+            transition: color 0.3s;
+        }
+
+        .contact a:hover {
+            color: var(--secondary-blue);
+        }
+
+        .footer {
+            margin-top: 30px;
+            font-size: 0.9em;
+            color: rgba(255, 255, 255, 0.7);
+            border-top: 1px solid rgba(255, 255, 255, 0.1);
+            padding-top: 15px;
+        }
+
+        /* Animations */
+        @keyframes float {
+            0%, 100% { transform: translateY(0px) rotateX(0deg); }
+            50% { transform: translateY(-10px) rotateX(2deg); }
+        }
+
+        @keyframes pulse-glow {
+            0% { box-shadow: 0 4px 20px rgba(0, 123, 255, 0.3); }
+            100% { box-shadow: 0 4px 20px rgba(30, 144, 255, 0.6), var(--glow-blue); }
+        }
+
+        /* Mobile Responsiveness */
+        @media (max-width: 768px) {
+            .card { padding: 20px; }
+            .logo { font-size: 2em; }
+            h1 { font-size: 1.8em; }
+            .intro p { font-size: 1em; }
+            .projects-grid { grid-template-columns: 1fr; }
+            .project { transform: none; }
+        }
+    </style>
 </head>
 <body>
-  <div class="card">
-    <div class="logo">🌐 Ridge Creek AI Labs</div>
+    <div class="card">
+        <div class="logo">Ridge Creek AI Labs</div>
 
-    <h1>🚧 Website Under Construction 🚧</h1>
-    <p>Our digital home is coming soon. Stay tuned!</p>
+        <h1>Website Under Construction</h1>
+        <div class="intro">
+            <p>Our digital home is coming soon. Stay tuned for groundbreaking AI innovations!</p>
+        </div>
 
-    <!-- Coming Soon Banner -->
-    <div class="banner">
-      <img src="coming-soon.png" alt="Coming Soon Banner">
+        <!-- Coming Soon Banner -->
+        <div class="banner">
+            Coming Soon – AI Revolution Awaits
+        </div>
+
+        <!-- Current Projects -->
+        <div class="projects">
+            <h2>Current Projects</h2>
+            <div class="projects-grid">
+                <div class="project">
+                    <h3>Solana Arbitrage Bot</h3>
+                    <p>Developing a high-efficiency trading bot using Jupiter Exchange for automated arbitrage.</p>
+                </div>
+                <div class="project">
+                    <h3>AI Traffic Monitoring</h3>
+                    <p>Researching real-time object and facial recognition for live traffic camera analysis.</p>
+                </div>
+                <div class="project">
+                    <h3>Quantum Mechanics Research Notes</h3>
+                    <p>Exploring waveforms, probability, and the nature of reality in a structured document series.</p>
+                </div>
+                <div class="project">
+                    <h3>eBay Profit Analyzer v2.1.1</h3>
+                    <p>Analyzing eBay sales data to maximize profits and optimize listings.</p>
+                </div>
+                <div class="project">
+                    <h3>Vehicle Finder Bot</h3>
+                    <p>Automating searches for the best vehicle deals and availability online.</p>
+                </div>
+                <div class="project">
+                    <h3>Social Assistant AI Bot</h3>
+                    <p>Creating an AI-powered assistant to manage social interactions and tasks efficiently.</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="contact">
+            <p>Contact: <a href="mailto:ridgecreekai@gmail.com">ridgecreekai@gmail.com</a></p>
+        </div>
+
+        <div class="footer">© 2025 Ridge Creek AI Labs</div>
     </div>
-
-    <!-- Current Projects -->
-    <div class="projects">
-      <h2>Current Projects</h2>
-      <div class="project">
-        <h3>🤖 Solana Arbitrage Bot</h3>
-        <p>Developing a high-efficiency trading bot using Jupiter Exchange for automated arbitrage.</p>
-      </div>
-      <div class="project">
-        <h3>📷 AI Traffic Monitoring</h3>
-        <p>Researching real-time object and facial recognition for live traffic camera analysis.</p>
-      </div>
-      <div class="project">
-        <h3>⚡ Quantum Mechanics Research Notes</h3>
-        <p>Exploring waveforms, probability, and the nature of reality in a structured document series.</p>
-      </div>
-      <div class="project">
-        <h3>💰 eBay Profit Analyzer v2.1.1</h3>
-        <p>Analyzing eBay sales data to maximize profits and optimize listings.</p>
-      </div>
-      <div class="project">
-        <h3>🚗 Vehicle Finder Bot</h3>
-        <p>Automating searches for the best vehicle deals and availability online.</p>
-      </div>
-      <div class="project">
-        <h3>🧠 Social Assistant AI Bot</h3>
-        <p>Creating an AI-powered assistant to manage social interactions and tasks efficiently.</p>
-      </div>
-    </div>
-
-    <div class="contact">
-      <p>📧 Contact: <a href="mailto:ridgecreekai@gmail.com">ridgecreekai@gmail.com</a></p>
-    </div>
-
-    <div class="footer">© 2025 Ridge Creek AI Labs</div>
-  </div>
 </body>
-</html>
-
 </html>
