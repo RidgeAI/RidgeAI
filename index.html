@@ -9,8 +9,8 @@
         :root {
             --primary-black: #0a0a0a;
             --dark-bg: #1a1a1a;
-            --accent-blue: #007bff; /* Dynamic blue accents (replaces green for trust & tech vibe) */
-            --bright-blue: #1e90ff; /* Brighter blue for highlights/glows */
+            --accent-blue: #007bff;
+            --bright-blue: #1e90ff;
             --secondary-blue: #0056b3;
             --text-light: #ffffff;
             --glow-blue: 0 0 20px #1e90ff, 0 0 40px #1e90ff;
@@ -69,7 +69,6 @@
             opacity: 0.9;
         }
 
-        /* Coming Soon Banner - CSS-based placeholder for one-file */
         .banner {
             margin: 30px 0;
             height: 200px;
@@ -152,14 +151,30 @@
         }
 
         .footer {
-            margin-top: 30px;
-            font-size: 0.9em;
+            margin-top: 40px;
+            padding: 20px 0;
+            text-align: center;
+            border-top: 1px solid rgba(30, 144, 255, 0.2);
             color: rgba(255, 255, 255, 0.7);
-            border-top: 1px solid rgba(255, 255, 255, 0.1);
-            padding-top: 15px;
+            font-size: 0.9em;
         }
 
-        /* Animations */
+        .footer p {
+            margin: 0;
+            color: var(--text-light);
+        }
+
+        .footer a {
+            color: var(--bright-blue);
+            text-decoration: none;
+            transition: color 0.3s;
+        }
+
+        .footer a:hover {
+            color: var(--accent-blue);
+            text-shadow: var(--glow-blue);
+        }
+
         @keyframes float {
             0%, 100% { transform: translateY(0px) rotateX(0deg); }
             50% { transform: translateY(-10px) rotateX(2deg); }
@@ -170,7 +185,6 @@
             100% { box-shadow: 0 4px 20px rgba(30, 144, 255, 0.6), var(--glow-blue); }
         }
 
-        /* Mobile Responsiveness */
         @media (max-width: 768px) {
             .card { padding: 20px; }
             .logo { font-size: 2em; }
@@ -190,12 +204,10 @@
             <p>Our digital home is coming soon. Stay tuned for groundbreaking AI innovations!</p>
         </div>
 
-        <!-- Coming Soon Banner -->
         <div class="banner">
             Coming Soon – AI Revolution Awaits
         </div>
 
-        <!-- Current Projects -->
         <div class="projects">
             <h2>Current Projects</h2>
             <div class="projects-grid">
@@ -212,8 +224,8 @@
                     <p>Exploring waveforms, probability, and the nature of reality in a structured document series.</p>
                 </div>
                 <div class="project">
-                    <h3>Ai Multi-Stack Engines</h3>
-                    <p>Hieriacy of Ai delegates with specialized tasking and complete product rendereing.</p>
+                    <h3>eBay Profit Analyzer v2.1.1</h3>
+                    <p>Analyzing eBay sales data to maximize profits and optimize listings.</p>
                 </div>
                 <div class="project">
                     <h3>Vehicle Finder Bot</h3>
@@ -230,7 +242,9 @@
             <p>Contact: <a href="mailto:ridgecreekai@gmail.com">ridgecreekai@gmail.com</a></p>
         </div>
 
-        <div class="footer">© 2025 Ridge Creek AI Labs</div>
+        <div class="footer">
+            <p>&copy; 2025 Ridge Creek AI Labs | A Division of Ridge Creek Capital, LLC | Ridge Creek AI | Ridge AI</p>
+        </div>
     </div>
 </body>
 </html>
